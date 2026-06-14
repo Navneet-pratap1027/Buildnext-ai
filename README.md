@@ -67,22 +67,43 @@ Add screenshots here after deployment.
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+```text
 buildnext-ai/
+│
 ├── client/
-│ ├── src/
-│ │ ├── pages/
-│ │ ├── components/
-│ │ ├── App.jsx
-│ │ └── index.js
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Landing.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── About.jsx
+│   │   │   └── Contact.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── ScoreCards.jsx
+│   │   │   ├── SkillChart.jsx
+│   │   │   ├── CategoryTags.jsx
+│   │   │   └── RecommendationCard.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   └── index.js
+│   │
+│   └── public/
 │
 ├── server/
-│ ├── routes/
-│ ├── services/
-│ └── index.js
+│   ├── routes/
+│   ├── services/
+│   └── index.js
 │
+├── screenshots/
+│   ├── landing.png
+│   └── dashboard.png
+│
+├── .gitignore
 └── README.md
-
----
+```
 
 ## ⚙️ Installation
 
