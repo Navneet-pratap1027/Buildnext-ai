@@ -1,0 +1,307 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+.landing-inner {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(20px);
+
+  color: #b7c1d9;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  margin-bottom: 28px;
+}
+
+.headline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.05em;
+
+  color: white;
+
+  margin-bottom: 24px;
+}
+.accent {
+  background: linear-gradient(
+    135deg,
+    #7c5cff,
+    #00d4ff
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.subline {
+  max-width: 760px;
+
+  margin: 0 auto 42px;
+
+  font-size: 1.15rem;
+  line-height: 1.9;
+
+  color: #a8b3cf;
+}
+
+.search-form {
+  display: flex;
+  gap: 16px;
+
+  max-width: 900px;
+
+  margin: 0 auto 30px;
+}
+
+.input-wrap {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  height: 72px;
+
+  padding: 0 24px;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(20px);
+
+  transition: .35s ease;
+}
+
+.input-wrap:hover {
+  border-color: rgba(124,92,255,.4);
+}
+
+.input-wrap:focus-within {
+  border-color: #7c5cff;
+
+  box-shadow:
+    0 0 0 4px rgba(124,92,255,.12);
+}
+
+.gh-icon {
+  color: #7c5cff;
+
+  display: flex;
+
+  flex-shrink: 0;
+}
+
+.input-wrap input {
+  width: 100%;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input-wrap input::placeholder {
+  color: #72809e;
+}
+
+.analyze-btn {
+  border: none;
+
+  min-width: 220px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c5cff,
+      #00d4ff
+    );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .35s ease;
+
+  box-shadow:
+    0 0 30px rgba(124,92,255,.25);
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(124,92,255,.35);
+}
+
+.analyze-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.loading-state {
+  max-width: 650px;
+
+  margin: 0 auto 24px;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255,255,255,.15);
+  border-top-color: #7c5cff;
+
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-msg {
+  color: #c6d1ea;
+  font-size: 15px;
+}
+
+.error-msg {
+  margin: 0 auto 24px;
+
+  max-width: 700px;
+
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(239,68,68,.08);
+
+  border:
+    1px solid rgba(239,68,68,.18);
+
+  color: #f87171;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.examples span {
+  color: #7e8aa7;
+  font-size: 14px;
+}
+
+.example-btn {
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  color: #c7d0e8;
+
+  border-radius: 999px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+
+  font-size: 13px;
+}
+
+.example-btn:hover {
+  border-color: #7c5cff;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 3rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .analyze-btn {
+    height: 64px;
+    width: 100%;
+  }
+
+  .input-wrap {
+    height: 64px;
+  }
+}

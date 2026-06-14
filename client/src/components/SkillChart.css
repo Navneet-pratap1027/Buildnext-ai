@@ -1,0 +1,118 @@
+.skill-list {
+  padding: 28px;
+
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  transition: .3s ease;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.skill-pct {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bar-track {
+  height: 10px;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255,255,255,.06);
+
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+
+  border-radius: 999px;
+
+  position: relative;
+
+  transition:
+    width .8s ease;
+}
+
+.bar-fill::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.25),
+      transparent
+    );
+}
+
+.skill-empty {
+  padding: 24px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  color: #8e9ab8;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.skill-row:hover .bar-fill {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .skill-list {
+    padding: 20px;
+  }
+
+  .skill-name,
+  .skill-pct {
+    font-size: 13px;
+  }
+
+  .bar-track {
+    height: 8px;
+  }
+}

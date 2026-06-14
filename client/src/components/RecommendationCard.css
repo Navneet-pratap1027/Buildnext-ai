@@ -1,0 +1,189 @@
+.rec-card {
+  position: relative;
+
+  padding: 26px;
+
+  margin-bottom: 18px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  overflow: hidden;
+
+  transition: .35s ease;
+}
+
+.rec-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(124,92,255,.15),
+      transparent 60%
+    );
+
+  opacity: 0;
+
+  transition: .35s ease;
+}
+
+.rec-card:hover::before {
+  opacity: 1;
+}
+
+.rec-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(124,92,255,.3);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+}
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.rec-rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c5cff,
+      #00d4ff
+    );
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rec-impact {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(34,197,94,.12);
+
+  border:
+    1px solid rgba(34,197,94,.25);
+
+  color: #22c55e;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rec-title {
+  color: white;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  margin-bottom: 14px;
+}
+
+.rec-reason {
+  color: #b7c1d9;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+.rec-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 18px;
+}
+
+.rec-difficulty,
+.rec-time {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rec-time {
+  color: #94a3b8;
+}
+
+.rec-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.tech-tag {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color: #d8e0f4;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: .3s ease;
+}
+
+.tech-tag:hover {
+  border-color:
+    rgba(124,92,255,.35);
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .rec-header {
+    gap: 12px;
+  }
+
+  .rec-title {
+    font-size: 18px;
+  }
+
+  .rec-card {
+    padding: 20px;
+  }
+}
