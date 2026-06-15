@@ -10,6 +10,10 @@ import Navbar from './components/Navbar';
 
 import axios from 'axios';
 
+const API_URL =
+  process.env.REACT_APP_API_URL ||
+  'http://localhost:5000';
+
 export default function App() {
   const [stage, setStage] = useState('landing');
   const [data, setData] = useState(null);
@@ -21,15 +25,18 @@ export default function App() {
 
     try {
       const res = await axios.post(
-        '/api/analyze',
+        `${API_URL}/api/analyze`,
         { username }
       );
 
       setData(res.data);
       setStage('dashboard');
     } catch (err) {
+      console.error(err);
+
       setError(
         err.response?.data?.error ||
+        err.message ||
         'Something went wrong. Try again.'
       );
 
@@ -69,7 +76,6 @@ export default function App() {
       <Navbar />
 
       <Routes>
-
         <Route
           path="/"
           element={<HomePage />}
@@ -84,7 +90,6 @@ export default function App() {
           path="/contact"
           element={<Contact />}
         />
-
       </Routes>
     </>
   );
