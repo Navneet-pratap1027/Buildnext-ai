@@ -2,27 +2,32 @@
 
 > Analyze your GitHub. Discover what's missing. Build what matters.
 
-BuildNext AI is an AI-powered portfolio intelligence platform that analyzes GitHub profiles, identifies skill gaps, measures project uniqueness, and recommends high-impact projects based on current industry demand.
+BuildNext AI is an AI-powered GitHub portfolio intelligence platform that helps developers identify skill gaps, detect overused portfolio projects, measure profile uniqueness, and receive personalized project recommendations powered by Google Gemini.
+
+🔗 **Live Demo:** https://buildnext-ai.vercel.app
+
+---
 
 ## ✨ Features
 
-* 🔍 GitHub Portfolio Analysis
+* 🔍 GitHub Profile Analysis
 * 📊 GitHub Score & Portfolio Health Metrics
 * 🎯 Skill Gap Detection
 * 🚨 Overused Project Detection
 * 💡 AI-Powered Project Recommendations
-* 📈 Skill Coverage Visualization
+* 📈 Skill Coverage Analysis
 * 🏷️ Portfolio Category Classification
 * 🤖 Google Gemini Powered Insights
 * 🎨 Modern SaaS Dashboard UI
+* 🌐 Fully Deployed Full-Stack Application
 
-## 🖼️ Preview
+---
 
-Add screenshots here after deployment.
+## 🖼️ Screenshots
 
 ### Landing Page
 
-![Landing](./screenshots/landing.png)
+![Landing Page](./screenshots/landing.png)
 
 ### Dashboard
 
@@ -30,14 +35,14 @@ Add screenshots here after deployment.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 
 * React 18
-* Recharts
-* CSS
+* React Router DOM
 * Axios
+* CSS3
 
 ### Backend
 
@@ -48,24 +53,28 @@ Add screenshots here after deployment.
 
 * Google Gemini
 
-### External APIs
+### APIs
 
 * GitHub REST API
+
+### Deployment
+
+* Vercel (Frontend)
+* Render (Backend)
 
 ---
 
 ## 🚀 How It Works
 
 1. Enter a GitHub username
-2. Fetch public repositories
-3. Analyze repository content and technologies
-4. Generate portfolio intelligence
-5. Detect missing skills and weak areas
-6. Recommend high-impact projects to build next
+2. Fetch public repositories using the GitHub API
+3. Analyze repository technologies and portfolio composition
+4. Calculate portfolio health metrics
+5. Identify missing skills and weaknesses
+6. Generate AI-powered insights and recommendations
+7. Recommend high-impact projects to build next
 
 ---
-
-## 📂 Project Structure
 
 ## 📂 Project Structure
 
@@ -73,24 +82,23 @@ Add screenshots here after deployment.
 buildnext-ai/
 │
 ├── client/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Landing.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── About.jsx
-│   │   │   └── Contact.jsx
-│   │   │
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── ScoreCards.jsx
-│   │   │   ├── SkillChart.jsx
-│   │   │   ├── CategoryTags.jsx
-│   │   │   └── RecommendationCard.jsx
-│   │   │
-│   │   ├── App.jsx
-│   │   └── index.js
-│   │
-│   └── public/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       │   ├── Navbar.jsx
+│       │   ├── ScoreCards.jsx
+│       │   ├── SkillChart.jsx
+│       │   ├── CategoryTags.jsx
+│       │   └── RecommendationCard.jsx
+│       │
+│       ├── pages/
+│       │   ├── Landing.jsx
+│       │   ├── Dashboard.jsx
+│       │   ├── About.jsx
+│       │   └── Contact.jsx
+│       │
+│       ├── App.jsx
+│       └── index.js
 │
 ├── server/
 │   ├── routes/
@@ -105,49 +113,41 @@ buildnext-ai/
 └── README.md
 ```
 
+---
+
 ## ⚙️ Installation
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/Navneet-pratap1027/Buildnext-ai
-cd buildnext-ai
+git clone https://github.com/Navneet-pratap1027/Buildnext-ai.git
+cd Buildnext-ai
 ```
 
-### Backend
+### Backend Setup
 
 ```bash
 cd server
 npm install
-cp .env.example .env
 ```
 
-Add:
+Create a `.env` file:
 
 ```env
 GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-### Frontend
+Run backend:
+
+```bash
+npm run dev
+```
+
+### Frontend Setup
 
 ```bash
 cd ../client
 npm install
-```
-
-### Run Application
-
-Backend:
-
-```bash
-cd server
-npm run dev
-```
-
-Frontend:
-
-```bash
-cd client
 npm start
 ```
 
@@ -163,27 +163,45 @@ npm start
 
 * Render
 
-Before deployment update API URLs and environment variables.
+Environment Variables:
+
+```env
+REACT_APP_API_URL=YOUR_RENDER_BACKEND_URL
+GEMINI_API_KEY=YOUR_API_KEY
+```
 
 ---
 
 ## 🎯 Why BuildNext AI?
 
-Most developers build projects blindly.
+Many developers build projects without knowing whether those projects actually improve employability.
 
 BuildNext AI helps developers understand:
 
-* What skills are missing
-* Which projects are overused
-* What employers actually value
-* What project should be built next
+* Which skills are missing from their portfolio
+* Which projects are overused in the market
+* Which technologies are underrepresented
+* What employers are likely looking for
+* Which projects can maximize portfolio impact
 
-This turns GitHub from a repository platform into a career intelligence tool.
+The goal is to transform GitHub from a code repository into a career intelligence platform.
+
+---
+
+## 🔮 Future Improvements
+
+* GitHub Contribution Heatmap
+* Radar Skill Visualization
+* AI Opportunity Insights
+* Market Demand Analytics
+* Docker Support
+* Custom Domain
+* Advanced Portfolio Benchmarking
 
 ---
 
 ## 👨‍💻 Author
 
-Navneet Pratap
+**Navneet Pratap**
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
